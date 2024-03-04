@@ -20,7 +20,6 @@ export class BookFormComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(formData: any): void {
-    console.log(formData);
     this.bookService.addBook({
       title: formData.title,
       genre: formData.genre,
@@ -35,8 +34,8 @@ export class BookFormComponent implements OnInit {
   }
 
   cancel(): void {
-    this.book = { title: '', author: '', genre: '', year: 0};
-    this.buttonText = 'Add Book';
-    this.cancelForm.emit();
+    // this.book = { title: '', author: '', genre: '', year: 0};
+    // this.buttonText = 'Add Book';
+    // this.cancelForm.emit();
   }
 }

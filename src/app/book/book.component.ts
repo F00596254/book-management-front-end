@@ -17,26 +17,6 @@ import { BookFormComponent } from '../book-form/book-form.component';
 export class BookComponent implements OnInit {
 
   displayedColumns: string[] = ['title', 'author', 'genre', 'year'];
-  selectedOption: any = '';
-  dropdownOptions: any[] = [
-    { label: 'Most Touchdowns', value: 'mostTouchdowns' },
-    { label: 'Most Rushing Yards', value: 'mostRushingYards' },
-    { label: 'Least Rushing Yards', value: 'leastRushingYards' },
-    { label: 'Fewest Field Goals', value: 'fewestFieldGoals' },
-    { label: 'Most Number of Sacks', value: 'mostNumberOfSacks' },
-  ];
-  selectedOptionMap: any = {
-    "mostTouchdowns" : "Most Touchdowns",
-    "mostRushingYards" : "Most Rushing Yards",
-    "leastRushingYards" : "Least Rushing Yards",
-    "fewestFieldGoals" : "Fewest Field Goals",
-    "mostNumberOfSacks" : "Most Number of Sacks",
-  };
-  queryResult: any = '';
-
-  getSelectedOption() {
-    return this.selectedOption;
-  }
 
   dataSource!: MatTableDataSource<Book>;
   isLoadingResults = true;
@@ -105,37 +85,6 @@ export class BookComponent implements OnInit {
   //           });
   //         });
   //       });
-  //     }
-  //   });
-  // }
-
-  onOptionSelected(): void {
-    console.log("Option Selected");
-  }
-
-  // onOptionSelected(): void {
-  //   // Make a call to your service with the selected option
-  //   this.playerService.performQuery(this.selectedOption).subscribe(response => {
-  //     // Handle the response if needed
-  //     let res = response && response[0];
-  //     switch(this.selectedOption) {
-  //       case 'mostTouchdowns':
-  //         this.queryResult = {ans: res.touchdownsThrown, name: res.name}
-  //         break;
-  //       case 'mostRushingYards':
-  //         this.queryResult = {ans: res.rushingYards, name: res.name}
-  //         break;
-  //       case 'leastRushingYards':
-  //         this.queryResult = {ans: res.rushingYards, name: res.name}
-  //         break;
-  //       case 'fewestFieldGoals':
-  //         this.queryResult = {ans: res.madeFieldGoals, name: res.name}
-  //         // this.queryResult = {ans: res.rushingYards, name: res.name}
-  //         break;
-  //       case 'mostNumberOfSacks':
-  //         this.queryResult = {ans: res.sacks, name: res.name}
-  //         // this.queryResult = {ans: res.rushingYards, name: res.name}
-  //         break;
   //     }
   //   });
   // }

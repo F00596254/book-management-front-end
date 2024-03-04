@@ -1,17 +1,4 @@
 <!-- book.component.html -->
-
-<div>
-  <h2>Queries</h2>
-</div>
-<mat-form-field>
-  <mat-label>Select Option</mat-label>
-  <mat-select [(ngModel)]="selectedOption" (selectionChange)="onOptionSelected()">
-    <mat-option *ngFor="let option of dropdownOptions" [value]="option.value">
-      {{ option.label }}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-<p *ngIf="selectedOption.length > 0">Selected Option: {{ selectedOptionMap[selectedOption] }} are {{queryResult.ans}} by {{queryResult.name}}</p>
 <h2>Books</h2>
 
 <div class="mat-elevation-z8">
@@ -35,7 +22,6 @@
       <th mat-header-cell *matHeaderCellDef> year </th>
       <td mat-cell *matCellDef="let book"> {{ book.year }} </td>
     </ng-container>
-
   
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef> Actions </th>

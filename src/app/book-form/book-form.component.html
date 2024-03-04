@@ -1,19 +1,19 @@
 <h2>Add Book</h2>
 <form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm.value)">
   <mat-form-field appearance="fill">
-    <mat-label>Name</mat-label>
+    <mat-label>Title</mat-label>
     <input matInput type="text" name="title" [(ngModel)]="book.title" required>
   </mat-form-field>
   <mat-form-field appearance="fill">
-    <mat-label>Touchdowns</mat-label>
+    <mat-label>Author</mat-label>
     <input matInput type="text" name="author" [(ngModel)]="book.author" required>
   </mat-form-field>
   <mat-form-field appearance="fill">
-    <mat-label>Rushingyards</mat-label>
+    <mat-label>Genre</mat-label>
     <input matInput type="text" name="genre" [(ngModel)]="book.genre" required>
   </mat-form-field>
   <mat-form-field appearance="fill">
-    <mat-label>Sacks</mat-label>
+    <mat-label>Year</mat-label>
     <input matInput type="number" name="year" [(ngModel)]="book.year" required>
   </mat-form-field>
   
